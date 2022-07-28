@@ -1,0 +1,35 @@
+PODS:
+  - Bluejay (0.8.9)
+  - Charts (4.0.3):
+    - Charts/Core (= 4.0.3)
+  - Charts/Core (4.0.3):
+    - SwiftAlgorithms (~> 1.0)
+  - SwiftAlgorithms (1.0.0)
+
+DEPENDENCIES:
+  - Bluejay (from `https://github.com/steamclock/bluejay.git`, branch `master`)
+  - Charts
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - SwiftAlgorithms
+
+EXTERNAL SOURCES:
+  Bluejay:
+    :branch: master
+    :git: https://github.com/steamclock/bluejay.git
+
+CHECKOUT OPTIONS:
+  Bluejay:
+    :commit: cf394b91af0e6029be8c85f3812440797b3812d6
+    :git: https://github.com/steamclock/bluejay.git
+
+SPEC CHECKSUMS:
+  Bluejay: 2dd1e38c0b3bb02c931c0c10d380887230b09a33
+  Charts: d959d6723c8eedfdd0735dfc28cb0a71762ac4d9
+  SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
+
+PODFILE CHECKSUM: 42705f2e2ab1aeed3ec27b4d74d8d962e92dd592
+
+COCOAPODS: 1.11.3

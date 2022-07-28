@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-BLEAppProject/Pods-BLEAppProject-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Bluejay/Bluejay.framework
+${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
+${BUILT_PRODUCTS_DIR}/SwiftAlgorithms/Algorithms.framework
