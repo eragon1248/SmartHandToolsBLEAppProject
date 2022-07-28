@@ -15,6 +15,9 @@
 		56BD9ADD289313DC00DA0C54 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BD9ADC289313DC00DA0C54 /* ScanViewController.swift */; };
 		56BD9ADF289313FE00DA0C54 /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BD9ADE289313FE00DA0C54 /* SensorViewController.swift */; };
 		56BD9AE1289314AB00DA0C54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BD9AE0289314AB00DA0C54 /* Main.storyboard */; };
+		56BD9AE328932FD200DA0C54 /* ChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BD9AE228932FD100DA0C54 /* ChartController.swift */; };
+		56BD9AE52893301000DA0C54 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BD9AE42893301000DA0C54 /* HistoryController.swift */; };
+		56BD9AE72893303800DA0C54 /* HistoryChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BD9AE62893303800DA0C54 /* HistoryChartController.swift */; };
 		F153D634DBF54308B4C1D87A /* Pods_BLEAppProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA0D71D62387D071E363E7B /* Pods_BLEAppProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +33,9 @@
 		56BD9ADC289313DC00DA0C54 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		56BD9ADE289313FE00DA0C54 /* SensorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
 		56BD9AE0289314AB00DA0C54 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = BLEAppProject/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		56BD9AE228932FD100DA0C54 /* ChartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartController.swift; sourceTree = "<group>"; };
+		56BD9AE42893301000DA0C54 /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
+		56BD9AE62893303800DA0C54 /* HistoryChartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryChartController.swift; sourceTree = "<group>"; };
 		8AA0D71D62387D071E363E7B /* Pods_BLEAppProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLEAppProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D404F75E02ADAF864B75CA /* Pods-BLEAppProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEAppProject.debug.xcconfig"; path = "Target Support Files/Pods-BLEAppProject/Pods-BLEAppProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +82,9 @@
 				56BD9ADA289313A100DA0C54 /* LogViewController.swift */,
 				56BD9ADC289313DC00DA0C54 /* ScanViewController.swift */,
 				56BD9ADE289313FE00DA0C54 /* SensorViewController.swift */,
+				56BD9AE228932FD100DA0C54 /* ChartController.swift */,
+				56BD9AE42893301000DA0C54 /* HistoryController.swift */,
+				56BD9AE62893303800DA0C54 /* HistoryChartController.swift */,
 			);
 			path = BLEAppProject;
 			sourceTree = "<group>";
@@ -212,11 +221,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56BD9AE328932FD200DA0C54 /* ChartController.swift in Sources */,
 				56BD9ADF289313FE00DA0C54 /* SensorViewController.swift in Sources */,
 				56BD9ADB289313A100DA0C54 /* LogViewController.swift in Sources */,
+				56BD9AE52893301000DA0C54 /* HistoryController.swift in Sources */,
 				56BD9AC52893113D00DA0C54 /* AppDelegate.swift in Sources */,
 				56BD9AD92893134400DA0C54 /* HeartRateMeasurement.swift in Sources */,
 				56BD9ADD289313DC00DA0C54 /* ScanViewController.swift in Sources */,
+				56BD9AE72893303800DA0C54 /* HistoryChartController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

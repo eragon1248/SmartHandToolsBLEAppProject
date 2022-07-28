@@ -15,10 +15,19 @@ let heartRateCharacteristic = CharacteristicIdentifier(
     service: ServiceIdentifier(uuid: "79D97F61-CD63-4365-B0BB-CEB84F7A190B")
 )
 
+let activityDict = [ 0: "error",
+                     1: "cut",
+                     2: "engrave",
+                     3: "idle",
+                     4: "route",
+                     5: "sand"]
+
+
 class SensorViewController: UITableViewController {
 
     var sensor: PeripheralIdentifier?
     var heartRate: HeartRateMeasurement?
+    static var measurements: [Int] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,21 +74,12 @@ class SensorViewController: UITableViewController {
             } else if indexPath.row == 1 {
                 cell.textLabel?.text = "Status"
                 cell.detailTextLabel?.text = bluejay.isConnected ? "Connected" : "Disconnected"
-            } else {
+            } else if indexPath.row == 2 {
                 cell.textLabel?.text = "Heart Rate"
                 cell.detailTextLabel?.text = String(heartRate?.measurement ?? 0)
-
-                DispatchQueue.main.async {
-                    UIView.animate(withDuration: 0.25, animations: {
-                        cell.detailTextLabel?.transform = cell.detailTextLabel!.transform.scaledBy(x: 1.5, y: 1.5)
-                    }, completion: { completed in
-                        if completed {
-                            UIView.animate(withDuration: 0.25) {
-                                cell.detailTextLabel?.transform = CGAffineTransform.identity
-                            }
-                        }
-                    })
-                }
+            } else {
+                cell.textLabel?.text = "Activity Type"
+                cell.detailTextLabel?.text = activityDict[heartRate?.measurement ?? 0]
             }
 
             return cell
@@ -95,6 +95,14 @@ class SensorViewController: UITableViewController {
             } else if indexPath.row == 3 {
                 cell.textLabel?.text = "End listen to heart rate"
             } else if indexPath.row == 4 {
+                cell.textLabel?.text = "Show Live Chart"
+            } else if indexPath.row == 5 {
+                cell.textLabel?.text = "Clear Chart"
+            } else if indexPath.row == 6 {
+                cell.textLabel?.text = "Save Session"
+            } else if indexPath.row == 7 {
+                cell.textLabel?.text = "Show History"
+            } else if indexPath.row == 8 {
                 cell.textLabel?.text = "Terminate app"
             }
 
@@ -125,11 +133,23 @@ class SensorViewController: UITableViewController {
             } else if indexPath.row == 3 {
                 endListen(to: heartRateCharacteristic)
             } else if indexPath.row == 4 {
+                performSegue(withIdentifier: "showChart", sender: self)
+            } else if indexPath.row == 5 {
+                SensorViewController.measurements = []
+            } else if indexPath.row == 6 {
+                saveHistory()
+            } else if indexPath.row == 7 {
+                performSegue(withIdentifier: "showChart", sender: self)
+            } else if indexPath.row == 8 {
                 kill(getpid(), SIGKILL)
             }
 
             tableView.deselectRow(at: indexPath, animated: true)
         }
+    }
+    
+    private func saveHistory(){
+        SensorViewController.measurements = []
     }
 
     private func listen(to characteristic: CharacteristicIdentifier) {
